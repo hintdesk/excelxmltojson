@@ -1,0 +1,1 @@
+﻿-i "ProduktauswahlTarife.xml" -o "products.json" -w "Changelog" "Tarife-Rollen" -c "ChangedocumentedonDate" "ChangedocumentedbyName" "TypeofChangeNNewCChange" "ChangeperIterationRelDatum" "ReihenfolgeProduktgruppe" "ReihenfolgeTarife" "ChancenRisikoKlasse" "Garantiemin" "Garantiemax" "Laufzeitmin" "Laufzeitmax" "CRK" "GRI"
