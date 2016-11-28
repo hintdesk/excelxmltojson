@@ -1,3 +1,4 @@
 packages/
 ExcelSheetToJson/bin/
 ExcelSheetToJson/obj/
+*.suo
