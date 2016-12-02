@@ -112,8 +112,9 @@ namespace ExcelSheetToJson
                         result.Add(null);
                     }
                 }
-
-                result.Add(this.xmlUtil.GetRelativeElement(cellElements[index], "Data").Value);
+                var foundValueObject = this.xmlUtil.GetRelativeElement(cellElements[index], "Data");
+                if (foundValueObject != null)
+                    result.Add(foundValueObject.Value);
             }
             return result;
         }
