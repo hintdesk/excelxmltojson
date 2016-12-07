@@ -115,6 +115,8 @@ namespace ExcelSheetToJson
                 var foundValueObject = this.xmlUtil.GetRelativeElement(cellElements[index], "Data");
                 if (foundValueObject != null)
                     result.Add(foundValueObject.Value);
+                else 
+                    result.Add(null);
             }
             return result;
         }
