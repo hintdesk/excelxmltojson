@@ -2,14 +2,15 @@
 using System.Dynamic;
 using System.Linq;
 using ClosedXML.Excel;
+using HDStandardLibrary.Excel;
 
 namespace ExcelSheetToJson
 {
     internal class XslxLoader
     {
-        private IList<HDWorksheet> Load(string fullFilePath)
+        private IList<ExcelXmlConverterWorksheet> Load(string fullFilePath)
         {
-            IList<HDWorksheet> worksheets = new List<HDWorksheet>();
+            IList<ExcelXmlConverterWorksheet> worksheets = new List<ExcelXmlConverterWorksheet>();
             var workBook = new XLWorkbook(fullFilePath);
             foreach (var xlWorksheet in workBook.Worksheets)
             {
@@ -18,9 +19,9 @@ namespace ExcelSheetToJson
             return worksheets;
         }
 
-        private HDWorksheet LoadWorksheet(IXLWorksheet xlWorksheet)
+        private ExcelXmlConverterWorksheet LoadWorksheet(IXLWorksheet xlWorksheet)
         {
-            var worksheet = new HDWorksheet();
+            var worksheet = new ExcelXmlConverterWorksheet();
             var columNames = new List<string>();
             for (var i = 0; i < xlWorksheet.ColumnCount(); i++)
             {
